@@ -6,7 +6,7 @@ import SingleFilm from "./SingleFilm";
 import SingleFilmPlaceholder from "./SingleFilmPlaceholder";
 // const key = "14895418";
 
-class FilmsSection extends Component {
+class SeriesSection extends Component {
   state = {
     searchURL: `http://www.omdbapi.com/?apikey=14895418&s=${this.props.searchString}`,
     searchArray: [],
@@ -72,7 +72,7 @@ class FilmsSection extends Component {
 
         {!this.state.error && !this.state.loading && (
           <>
-            <h4>The {this.props.searchString} Saga</h4>
+            <h4>{this.props.searchString} series</h4>
             <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 mb-4">
               {this.state.searchArray.slice(0, 6).map((film) => {
                 return <SingleFilm key={film.imdbID} filmSrc={film.Poster} filmTitle={film.Title}></SingleFilm>;
@@ -85,4 +85,4 @@ class FilmsSection extends Component {
   }
 }
 
-export default FilmsSection;
+export default SeriesSection;
