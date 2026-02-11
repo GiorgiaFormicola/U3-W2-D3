@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 class AccountNavbar extends Component {
   render() {
@@ -8,9 +9,9 @@ class AccountNavbar extends Component {
       <header>
         <Navbar data-bs-theme="dark">
           <Container fluid={true}>
-            <Navbar.Brand href="#home">
+            <Link to="/" className="navbar-brand">
               <img src="/assets/images/logo.png" className="d-inline-block align-top" alt="Netflix Logo" style={{ width: "100px", height: "55px" }} />
-            </Navbar.Brand>
+            </Link>
           </Container>
         </Navbar>
       </header>
