@@ -72,10 +72,10 @@ class SeriesSection extends Component {
 
         {!this.state.error && !this.state.loading && (
           <>
-            <h4>{this.props.searchString} series</h4>
+            <h4>{this.props.searchString} Series</h4>
             <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 mb-4">
               {this.state.searchArray.slice(0, 6).map((film) => {
-                return <SingleFilm key={film.imdbID} filmSrc={film.Poster} filmTitle={film.Title}></SingleFilm>;
+                return <SingleFilm key={film.imdbID} filmSrc={film.Poster} filmTitle={film.Title} filmID={film.imdbID}></SingleFilm>;
               })}
             </Row>
           </>
